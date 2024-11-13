@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Library Management System</h2>
+        <ul>
+            <li>Dashboard</li>
+            <!-- Manage Books with dropdown submenu -->
+            <li class="manage-books">
+                Manage Books
+                <ul class="submenu">
+                    
+                    <li><a href="view book.html">View Books</a></li>
+                </ul>
+            </li>
+            <!-- Manage Category with dropdown submenu -->
+            <li class="manage-category">
+                Manage Category
+                <ul class="submenu">
+                    <li><a href="view category.html">View Category</a></li>
+                </ul>
+            </li>
+            <!-- Manage Place with dropdown submenu -->
+            <li class="manage-place">
+                Manage Place
+                <ul class="submenu">
+                    <li><a href="view place.html">View Place</a></li>
+                </ul>
+            </li>
+            <!-- Manage Users with dropdown submenu -->
+            <li class="manage-users">
+                Manage Users
+                <ul class="submenu">
+                    <li><a href="add_user.html">Add User</a></li>
+                </ul>
+            </li>
+            <ul class="submenu">
+            <li><a href="book.html">Add Book</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Library Dashboard</h1>
+        <div class="dashboard">
+            <div class="card" style="background-color: #4CAF50;">
+                <h2>Total Books<br>12</h2>
+                <p><?php echo $totalBooks; ?></p>
+            </div>
+            <div class="card" style="background-color: #FFEB3B;">
+                <h2>Available Books<br>6</h2>
+                <p><?php echo $availableBooks; ?></p>
+            </div>
+            <div class="card" style="background-color: #FF5722;">
+                <h2>Issued Books<br>6</h2>
+                <p><?php echo $issuedBooks; ?></p>
+            </div>
+            <div class="card" style="background-color: #03A9F4;">
+                <h2>Returned Books<br>2</h2>
+                <p><?php echo $returnedBooks; ?></p>
+            </div>
+            <div class="card" style="background-color: #E91E63;">
+                <h2>Total Users<br>3</h2>
+                <p><?php echo $totalUsers; ?></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the submenu visibility
+        document.querySelector(".manage-books").addEventListener("click", function() {
+            const submenu = this.querySelector(".submenu");
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+
+        document.querySelector(".manage-category").addEventListener("click", function() {
+            const submenu = this.querySelector(".submenu");
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+
+        document.querySelector(".manage-place").addEventListener("click", function() {
+            const submenu = this.querySelector(".submenu");
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+
+        document.querySelector(".manage-users").addEventListener("click", function() {
+            const submenu = this.querySelector(".submenu");
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
